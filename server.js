@@ -1,3 +1,3 @@
-import { Express } from "express";
 
-const app = Express()
+
+const app = require('./app')
