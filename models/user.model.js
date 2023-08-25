@@ -30,6 +30,12 @@ const userschema = new schema({
         select: false  /// someone trying to access so it must false
     },
 
+    role:{
+        type:String,
+        enum:['USER','ADMIN'],
+        default:'USER'
+    },
+
     avatar:{
         public_id: {
             type:String
@@ -37,12 +43,10 @@ const userschema = new schema({
         secure_url:{
             type:String
         }
-
-    }
-     
-
-
-
+       },
+     forgrtPasswordToken:String,
+     forgetPasswordExpiary: Date
 }, {
-     TimeRanges: true
+     TimeRanges: true,
+     
 })
