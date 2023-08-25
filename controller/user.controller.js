@@ -1,6 +1,20 @@
+const User = require("../models/user.model");
+const { default: AppError } = require("../utils/appError");
+const User = require('../models/user.model')
 
-const register = () =>{
 
+const register = async (req,res) =>{
+     const{fullname, email , password} = req.body;
+
+     if (!fullname || !email || !password) {
+        return next(new AppError('All fields are required' , 400));
+     }
+
+     const userExists = await User.findone({email});
+
+     if (userExists) {
+        return next(new AppError('Email Already Exist' , 400));       
+     }
 }
 
 const login = () =>{

@@ -50,3 +50,7 @@ const userschema = new schema({
      TimeRanges: true,
      
 })
+
+const User = model('User', userschema)
+
+module.exports = User;
