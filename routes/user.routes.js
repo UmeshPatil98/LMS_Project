@@ -1,7 +1,13 @@
 
 const express =require('express');
-const { route } = require('../app');
 const router = express.Router;  // router is instance of the Router
+const{
+    register,
+    login,
+    logout,
+    getProfile
+} = require('./../controller/user.controller');
+
 
 router.post('/register',register);
 router.post('/login',login);
