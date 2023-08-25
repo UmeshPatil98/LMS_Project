@@ -4,9 +4,9 @@ const User = require('../models/user.model')
 
 
 const register = async (req,res) =>{
-     const{fullname, email , password} = req.body;
+     const{fullName, email , password} = req.body;
 
-     if (!fullname || !email || !password) {
+     if (!fullName || !email || !password) {
         return next(new AppError('All fields are required' , 400));
      }
 
