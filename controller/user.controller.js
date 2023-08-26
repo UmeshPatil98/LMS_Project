@@ -1,6 +1,6 @@
-const User = require("../models/user.model");
-const { default: AppError } = require("../utils/appError");
-const User = require('../models/user.model')
+import User from "../models/user.model.js";
+import AppError from "../utils/appError.js";
+
 
 
 const register = async (req,res) =>{
@@ -29,7 +29,7 @@ const getProfile = () =>{
 
 }
 
-module.exports ={
+export {
     register,
     login,
     logout,

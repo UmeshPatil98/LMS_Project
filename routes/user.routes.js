@@ -1,12 +1,12 @@
 
-const express =require('express');
+import express from 'express';
 const router = express.Router;  // router is instance of the Router
-const{
+import{
     register,
     login,
     logout,
     getProfile
-} = require('./../controller/user.controller');
+} from './../controller/user.controller.js';
 
 
 router.post('/register',register);
@@ -14,5 +14,5 @@ router.post('/login',login);
 router.get('/logout',logout);
 router.get('/me',getProfile);
 
-module.exports = router;
+export default router;
 

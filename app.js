@@ -1,7 +1,7 @@
 
-const cookieParser = require ('cookie-parser');
-const express = require ('express');
-const cors = require('cors');
+const cookieParser = require ( 'cookie-parser');
+const express = require ( 'express');
+const cors = require ('cors');
 
 const app = express();
 
@@ -25,4 +25,6 @@ app.use('*',(req,res)=>{
     res.status(404).send('OOpss!!! 404 page not found')
 })
 
-module.exports= app;
+module . exports= app;
+
+ 
