@@ -7,7 +7,7 @@ const app = express();
 
 
 
-//app.use(express.json());
+app.use(express.json());
 
 app.use(cors({
     origin:[process.env.FRONTEND_URL],
@@ -27,6 +27,6 @@ app.use('*',(req,res)=>{
     res.status(404).send('OOpss!!! 404 page not found')
 })
 
-module . exports= app;
+//module.exports= app;
 
  
