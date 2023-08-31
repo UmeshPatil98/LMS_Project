@@ -33,7 +33,8 @@ const userschema = new schema({
     role:{
         type:String,
         enum:['USER','ADMIN'],
-        default:'USER'
+        default:'USER',
+        default:'ADMIN'
     },
 
     avatar:{
