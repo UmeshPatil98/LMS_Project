@@ -34,6 +34,7 @@ const userschema = new schema({
         type:String,
         enum:['USER','ADMIN'],
         default:'USER',
+        default:'ADMIN'
          
     },
 
