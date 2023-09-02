@@ -6,7 +6,7 @@ import AppError from "../utils/appError.js";
 const register = async (req,res) =>{
      const{fullName, email , password} = req.body;
 
-     if (!fullName || !email || !password) {
+     if (!fullName || !email ) {
         return next(new AppError('All fields are required' , 400));
      }
 
